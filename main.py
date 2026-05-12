@@ -11,8 +11,8 @@ MY_PHONE_NUMBER = os.environ.get("MY_PHONE_NUMBER")
 TWILIO_PHONE = os.environ.get("TWILIO_PHONE")
 
 parameters = {
-    "lat": 51.592365,
-    "lon": 45.960804,
+    "lat": 51.160522,
+    "lon": 71.470360,
     "appid": API_KEY,
     "cnt": 4
 }
