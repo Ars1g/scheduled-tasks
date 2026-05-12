@@ -7,8 +7,8 @@ API_KEY = os.environ.get("OWM_API_KEY")
 API_ENDPOINT = "https://api.openweathermap.org/data/2.5/forecast"
 account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
 auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
-my_phone_number = os.environ.get("my_phone_number")
-my_twilio_phone = os.environ.get("TWILIO_PHONE")
+MY_PHONE_NUMBER = os.environ.get("MY_PHONE_NUMBER")
+TWILIO_PHONE = os.environ.get("TWILIO_PHONE")
 
 parameters = {
     "lat": 51.592365,
@@ -48,8 +48,8 @@ if is_rainy_today:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's going to rain today. Don't forget an umbrella",
-        from_=f"whatsapp:{my_twilio_phone}",
-        to=f"whatsapp:{my_phone_number}",
+        from_=f"whatsapp:{TWILIO_PHONE}",
+        to=f"whatsapp:{MY_PHONE_NUMBER}",
     )
 
     print(message.status)
